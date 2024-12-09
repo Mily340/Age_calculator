@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">🌙</label>
+    </div>
+    
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+            <button onclick="calculateAge()">Calculate Age</button>
+            
+            <div class="result" id="result">
+                <div class="time-block">
+                    <span class="number" id="years">-</span>
+                    <span class="label">Years</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="months">-</span>
+                    <span class="label">Months</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="days">-</span>
+                    <span class="label">Days</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
